@@ -10,6 +10,4 @@ app = Flask(__name__)
 app.debug = True
 application = WSGIApplication(app)
 
-@app.route('/')
-def index():
-    return 'Index Page'
+
