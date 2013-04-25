@@ -16,4 +16,4 @@ application = WSGIApplication(app)
 
 @app.route('/')
 def hello():
-    return "Hello, world! - Flask\n"
+    return "Hello, world! - Flask\n" + str(weixin_api)
