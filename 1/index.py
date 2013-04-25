@@ -1,11 +1,17 @@
 #-*- coding:utf-8 -*-
+import sys
+sys.path.insert(0, APP_DIR + '/lib')
 
-def app(environ, start_response):
-    status = '200 OK'
-    headers = [('Content-type', 'text/html')]
-    start_response(status, headers)
-    body=["Welcome to Baidu Cloud!\n"]
-    return body
+from flask import Flask
 
+from bae.core.const import APP_NAME, APP_DIR, APP_TMPDIR
 from bae.core.wsgi import WSGIApplication
+
+app = Flask(__name__)
+app.debug = True
 application = WSGIApplication(app)
+
+
+@app.route('/')
+def index():
+    return 'Index Page'
