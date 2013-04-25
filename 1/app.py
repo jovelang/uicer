@@ -15,7 +15,7 @@ app.register_blueprint(weixin_api)
 
 @app.route('/')
 def hello():
-    return "Hello, world! - Flask\n" + weixin_api
+    return "Hello, world! - Flask\n"
 
 
 
