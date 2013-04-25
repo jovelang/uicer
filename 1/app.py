@@ -13,7 +13,7 @@ app.debug = True
 app.register_blueprint(weixin_api)
 
 
-@app.route('/')
+@app.route('/aa')
 def hello():
     return "Hello, world! - Flask\n"
 
