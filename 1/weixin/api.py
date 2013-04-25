@@ -6,4 +6,4 @@ weixin_api = Blueprint('weixin_api', __name__)
 
 @weixin_api.route('/show')
 def show():
-    return 'hello world'
+    return 'this will be worked as weixin api'
