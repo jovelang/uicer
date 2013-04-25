@@ -3,7 +3,7 @@ import sys
 
 from flask import Flask
 
-from weixinimport weixin_api
+from weixin import weixin_api
 
 app = Flask(__name__)
 app.debug = True
