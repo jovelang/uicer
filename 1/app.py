@@ -19,4 +19,4 @@ def hello():
 
 
 
-application = WSGIApplication(app)
+application = WSGIApplication(app.wsgi_app)
