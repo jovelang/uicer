@@ -22,7 +22,7 @@ app.register_blueprint(weibo, url_prefix='/weibo')
 @app.route("/")
 def index():
     return "Hello Shudong!"
-
+#I am editing master
 if local:
     app.run()
 else:
