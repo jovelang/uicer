@@ -22,8 +22,9 @@ app.register_blueprint(weibo, url_prefix='/weibo')
 @app.route("/")
 def index():
     return "Hello Shudong!testing branch"
-
+#I am editing master
 if local:
     app.run()
+#here is hot fix
 else:
     application = WSGIApplication(app.wsgi_app)
