@@ -25,5 +25,6 @@ def index():
 #I am editing master
 if local:
     app.run()
+#here is hot fix
 else:
     application = WSGIApplication(app.wsgi_app)
