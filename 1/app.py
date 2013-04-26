@@ -2,18 +2,28 @@
 import sys
 
 from flask import Flask
-from bae.core.const import APP_NAME, APP_DIR, APP_TMPDIR
-from bae.core.wsgi import WSGIApplication
-sys.path.insert(0, APP_DIR + '/lib')
+try:
+    from bae.core.const import APP_NAME, APP_DIR, APP_TMPDIR
+    from bae.core.wsgi import WSGIApplication
+    sys.path.insert(0, APP_DIR + '/lib')
+except:
+    local = True
+else:
+    local = False
 
-from weixin import weixin_api
+from weixin import weixin
+from weibo import weibo
 
 app = Flask(__name__)
 app.debug = True
-app.register_blueprint(weixin_api, url_prefix='/weixin')
+app.register_blueprint(weixin, url_prefix='/weixin')
+app.register_blueprint(weibo, url_prefix='/weibo')
 
 @app.route("/")
-def hello():
-    return "Hello World! <br />/weixin/show"
+def index():
+    return "Hello World!"
 
-application = WSGIApplication(app.wsgi_app)
+if local:
+    app.run()
+else:
+    application = WSGIApplication(app.wsgi_app)

@@ -1,1 +1,1 @@
-from api import weixin_api
+from weixin_api import weixin

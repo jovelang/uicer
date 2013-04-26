@@ -2,8 +2,8 @@
 
 from flask import Blueprint
 
-weixin_api = Blueprint('weixin_api', __name__)
+weixin = Blueprint('weixin', __name__)
 
-@weixin_api.route('/show')
-def show():
+@weixin.route('/')
+def index():
     return 'this will be worked as weixin api'
