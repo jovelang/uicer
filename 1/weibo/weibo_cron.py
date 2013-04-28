@@ -11,7 +11,7 @@ CALLBACK_URL = 'http://lvyaojia.sinaapp.com/'
 
 #授权用户的账号密码
 USERID = 'lvyaojia@gmail.com'
-USERPASSWD = 'XM310opq,ibo....'
+USERPASSWD = ''
 
 
 def get_access_token_from_weibo(client):
