@@ -21,7 +21,6 @@ app.debug = True
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.register_blueprint(weixin, url_prefix='/weixin')
 app.register_blueprint(weibo, url_prefix='/weibo')
-
 db.init_app(app)
 
 @app.route("/")
